@@ -22,7 +22,7 @@ class TabelaHashEnderecamentoAberto:
     # Retorna o valor do hash para uma determinada chave
     def __hash(self, chave) -> int:
         # implementação do método
-        pass
+        return hash(chave) % self.__tamanho
 
 
     # Retorna o valor do hash2 para uma determinada chave e índice k
