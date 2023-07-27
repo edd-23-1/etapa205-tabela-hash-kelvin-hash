@@ -37,7 +37,21 @@ class TabelaHashEnderecamentoAberto:
     # Ele é usado internamente para auxiliar os métodos get() e remove()
     def __find(self, chave) -> int:
         # implementação do método
-        pass
+        position = self.__hash(chave)
+
+        for count in range(self.__tamanho):
+            if (self.__tabela[position] is None
+                or self.__tabela[position].chave == chave
+                or self.__tabela[position].chave == self.LIBERADO):
+                
+                break
+
+            position = self.__hash2(chave, count)
+
+        if self.__tabela[position] is None or count >= self.__tamanho - 1:
+            return -1
+
+        return position
 
 
     # Retorna o objeto No da tabela hash para uma determinada chave
