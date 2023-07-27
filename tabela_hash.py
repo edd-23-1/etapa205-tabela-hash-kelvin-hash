@@ -43,7 +43,7 @@ class TabelaHashEnderecamentoAberto:
             if (self.__tabela[position] is None
                 or self.__tabela[position].chave == chave
                 or self.__tabela[position].chave == self.LIBERADO):
-                
+
                 break
 
             position = self.__hash2(chave, count)
@@ -58,7 +58,12 @@ class TabelaHashEnderecamentoAberto:
     # Caso a chave não exista na tabela, retorna None
     def get(self, chave) -> No:
         # implementação do método
-        pass
+        position = self.__find(chave)
+
+        if position == -1:
+            return None
+
+        return self.__tabela[position].dado
 
 
     # Insere um nó na tabela hash recebendo uma chave e um valor
