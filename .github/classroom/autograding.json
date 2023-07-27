@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "name": "test1",
+      "setup": "sudo -H pip3 install pytest",
+      "run": " pytest test/test_tabela_hash.py -k insert_get_sem_colisao -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "test2",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_insert_get_com_colisao1 -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "test3",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_insert_get_com_colisao2 -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "test4",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_get_com_chave_invalida -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test5",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_remove_true -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "test6",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_remove_chave_invalida -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "test7",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test/test_tabela_hash.py -k test_display -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}
